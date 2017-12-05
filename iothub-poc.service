@@ -6,7 +6,7 @@ After=docker.service
 [Service]
 Restart=never
 ExecStartPre=-/usr/bin/docker rm -f iothub-poc
-ExecStart=/usr/bin/docker run --rm --privileged --name iothub-poc -v /var/run/docker.sock:/var/run/docker.sock -v /usr/local/test1:/usr/local/test1 -t raj2sudha/iothub-poc:latest
+ExecStart=/usr/bin/docker run --privileged --name iothub-poc -v /var/run/docker.sock:/var/run/docker.sock -v /usr/local/test1:/usr/local/test1 -t raj2sudha/iothub-poc:latest
 ExecStop=/usr/bin/docker stop -t 2 iothub-poc
 
 [Install]
